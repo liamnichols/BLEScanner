@@ -11,7 +11,7 @@
 #import "BLEStickerPeripheral.h"
 
 
-@interface ViewController ()
+@interface ViewController () <BLEPeripheralManagerDelegate>
 
 @property (nonatomic, strong) BLEPeripheralManager *manager;
 
@@ -24,8 +24,14 @@
     [super viewDidLoad];
 
     self.manager = [BLEPeripheralManager new];
+    self.manager.delegate = self;
     [self.manager registerPeripheralClass:[BLEStickerPeripheral class]];
     [self.manager startScanning];
+}
+
+- (void)peripheralManager:(BLEPeripheralManager *)manager didUpdatePeripheral:(BLEPeripheral *)peripheral
+{
+    NSLog(@"didUpdatePeripheral: %@", peripheral);
 }
 
 @end

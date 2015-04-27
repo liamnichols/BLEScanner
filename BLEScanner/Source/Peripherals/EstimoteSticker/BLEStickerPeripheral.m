@@ -94,8 +94,6 @@ static NSString * const BLEStickerPeripheralAdvertismentPrefix = @"5d01";
     uint8_t accelerationZ;
     [data getBytes:&accelerationZ range:NSMakeRange(18, sizeof(accelerationZ))];
     _accelerationZ = (2000.0 / 128) * (int8_t)accelerationZ; //must cast to signed int
-    
-    NSLog(@"updated: %@", self);
 }
 
 #pragma mark - Description

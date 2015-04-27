@@ -121,6 +121,7 @@ static const NSTimeInterval BLEPeripheralManagerRestartWaitDuration = 3.0;
     NSLog(@"%s", __PRETTY_FUNCTION__);
     [self.centralManager stopScan];
     [self.restartTimer invalidate];
+    self.restartTimer = nil;
 }
 
 - (void)_restartScan:(id)sender
@@ -146,6 +147,7 @@ static const NSTimeInterval BLEPeripheralManagerRestartWaitDuration = 3.0;
 {
     if (self.restartTimer.isValid) {
         [self.restartTimer invalidate];
+        self.restartTimer = nil;
     }
     self.restartTimer = [NSTimer scheduledTimerWithTimeInterval:BLEPeripheralManagerRestartWaitDuration target:self selector:@selector(_restartScan:) userInfo:nil repeats:NO];
     
@@ -196,7 +198,10 @@ static const NSTimeInterval BLEPeripheralManagerRestartWaitDuration = 3.0;
         blePeripheral.lastUpdate = [NSDate date];
     }
     
-    // TODO: do something with a delegate?
+    // inform the delegate
+    if (blePeripheral && [self.delegate respondsToSelector:@selector(peripheralManager:didUpdatePeripheral:)]) {
+        [self.delegate peripheralManager:self didUpdatePeripheral:blePeripheral];
+    }
 }
 
 - (Class)classOfRegisteredPeripheralSupportingAdvertismentData:(NSData *)data

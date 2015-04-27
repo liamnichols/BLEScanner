@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+@class BLEPeripheral;
+@protocol BLEPeripheralManagerDelegate;
 
 @interface BLEPeripheralManager : NSObject
 
@@ -15,5 +17,19 @@
 - (void)startScanning;
 
 - (void)stopScanning;
+
+@property (nonatomic, weak) id<BLEPeripheralManagerDelegate> delegate;
+
+@end
+
+@protocol BLEPeripheralManagerDelegate <NSObject>
+
+@optional
+
+- (void)peripheralManagerDidStartScanning:(BLEPeripheralManager *)manager;
+
+- (void)peripheralManagerDidStopScanning:(BLEPeripheralManager *)manager;
+
+- (void)peripheralManager:(BLEPeripheralManager *)manager didUpdatePeripheral:(BLEPeripheral *)peripheral;
 
 @end
