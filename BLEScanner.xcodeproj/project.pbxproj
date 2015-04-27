@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5367F5FD1A9A78310010A406 /* BLEPeripheralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5367F5FC1A9A78310010A406 /* BLEPeripheralManager.m */; };
+		5367F6001A9A7A1C0010A406 /* BLEPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 5367F5FF1A9A7A1C0010A406 /* BLEPeripheral.m */; };
+		5367F60A1A9A82E90010A406 /* BLEStickerPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 5367F6091A9A82E90010A406 /* BLEStickerPeripheral.m */; };
+		5367F6101A9A8A2F0010A406 /* BLEDataParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5367F60F1A9A8A2F0010A406 /* BLEDataParsing.m */; };
+		538F62E71A99026E00B7052C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 538F62E61A99026E00B7052C /* AppDelegate.m */; };
+		538F62E91A99026E00B7052C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 538F62E81A99026E00B7052C /* main.m */; };
+		538F62EC1A99026E00B7052C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538F62EB1A99026E00B7052C /* ViewController.m */; };
+		538F62EE1A99026E00B7052C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538F62ED1A99026E00B7052C /* Images.xcassets */; };
+		538F62F11A99026E00B7052C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538F62EF1A99026E00B7052C /* Main.storyboard */; };
+		538F62FD1A99026E00B7052C /* BLEScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 538F62FC1A99026E00B7052C /* BLEScannerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		538F62F71A99026E00B7052C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 538F62D81A99026E00B7052C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 538F62DF1A99026E00B7052C;
+			remoteInfo = BLEScanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5367F5FB1A9A78310010A406 /* BLEPeripheralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEPeripheralManager.h; sourceTree = "<group>"; };
+		5367F5FC1A9A78310010A406 /* BLEPeripheralManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEPeripheralManager.m; sourceTree = "<group>"; };
+		5367F5FE1A9A7A1C0010A406 /* BLEPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEPeripheral.h; sourceTree = "<group>"; };
+		5367F5FF1A9A7A1C0010A406 /* BLEPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEPeripheral.m; sourceTree = "<group>"; };
+		5367F6011A9A7EED0010A406 /* BLEPeripheral-Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BLEPeripheral-Private.h"; sourceTree = "<group>"; };
+		5367F6081A9A82E90010A406 /* BLEStickerPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEStickerPeripheral.h; sourceTree = "<group>"; };
+		5367F6091A9A82E90010A406 /* BLEStickerPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEStickerPeripheral.m; sourceTree = "<group>"; };
+		5367F60E1A9A8A2F0010A406 /* BLEDataParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLEDataParsing.h; path = Peripherals/BLEDataParsing.h; sourceTree = "<group>"; };
+		5367F60F1A9A8A2F0010A406 /* BLEDataParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLEDataParsing.m; path = Peripherals/BLEDataParsing.m; sourceTree = "<group>"; };
+		538F62E01A99026E00B7052C /* BLEScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		538F62E41A99026E00B7052C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		538F62E51A99026E00B7052C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		538F62E61A99026E00B7052C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		538F62E81A99026E00B7052C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		538F62EA1A99026E00B7052C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		538F62EB1A99026E00B7052C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		538F62ED1A99026E00B7052C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		538F62F01A99026E00B7052C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		538F62F61A99026E00B7052C /* BLEScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLEScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		538F62FB1A99026E00B7052C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		538F62FC1A99026E00B7052C /* BLEScannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEScannerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		538F62DD1A99026E00B7052C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		538F62F31A99026E00B7052C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5367F6021A9A82A00010A406 /* Peripherals */ = {
+			isa = PBXGroup;
+			children = (
+				5367F6031A9A82A00010A406 /* EstimoteSticker */,
+				5367F6041A9A82A00010A406 /* iBeacon */,
+			);
+			path = Peripherals;
+			sourceTree = "<group>";
+		};
+		5367F6031A9A82A00010A406 /* EstimoteSticker */ = {
+			isa = PBXGroup;
+			children = (
+				5367F6081A9A82E90010A406 /* BLEStickerPeripheral.h */,
+				5367F6091A9A82E90010A406 /* BLEStickerPeripheral.m */,
+			);
+			path = EstimoteSticker;
+			sourceTree = "<group>";
+		};
+		5367F6041A9A82A00010A406 /* iBeacon */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iBeacon;
+			sourceTree = "<group>";
+		};
+		538F62D71A99026E00B7052C = {
+			isa = PBXGroup;
+			children = (
+				538F62E21A99026E00B7052C /* BLEScanner */,
+				538F62F91A99026E00B7052C /* BLEScannerTests */,
+				538F62E11A99026E00B7052C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		538F62E11A99026E00B7052C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				538F62E01A99026E00B7052C /* BLEScanner.app */,
+				538F62F61A99026E00B7052C /* BLEScannerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		538F62E21A99026E00B7052C /* BLEScanner */ = {
+			isa = PBXGroup;
+			children = (
+				538F63061A99028100B7052C /* Source */,
+				538F62E51A99026E00B7052C /* AppDelegate.h */,
+				538F62E61A99026E00B7052C /* AppDelegate.m */,
+				538F62EA1A99026E00B7052C /* ViewController.h */,
+				538F62EB1A99026E00B7052C /* ViewController.m */,
+				538F62ED1A99026E00B7052C /* Images.xcassets */,
+				538F62EF1A99026E00B7052C /* Main.storyboard */,
+				538F62E31A99026E00B7052C /* Supporting Files */,
+			);
+			path = BLEScanner;
+			sourceTree = "<group>";
+		};
+		538F62E31A99026E00B7052C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				538F62E41A99026E00B7052C /* Info.plist */,
+				538F62E81A99026E00B7052C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		538F62F91A99026E00B7052C /* BLEScannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				538F62FC1A99026E00B7052C /* BLEScannerTests.m */,
+				538F62FA1A99026E00B7052C /* Supporting Files */,
+			);
+			path = BLEScannerTests;
+			sourceTree = "<group>";
+		};
+		538F62FA1A99026E00B7052C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				538F62FB1A99026E00B7052C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		538F63061A99028100B7052C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5367F6021A9A82A00010A406 /* Peripherals */,
+				5367F5FB1A9A78310010A406 /* BLEPeripheralManager.h */,
+				5367F5FC1A9A78310010A406 /* BLEPeripheralManager.m */,
+				5367F5FE1A9A7A1C0010A406 /* BLEPeripheral.h */,
+				5367F6011A9A7EED0010A406 /* BLEPeripheral-Private.h */,
+				5367F5FF1A9A7A1C0010A406 /* BLEPeripheral.m */,
+				5367F60E1A9A8A2F0010A406 /* BLEDataParsing.h */,
+				5367F60F1A9A8A2F0010A406 /* BLEDataParsing.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		538F62DF1A99026E00B7052C /* BLEScanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 538F63001A99026E00B7052C /* Build configuration list for PBXNativeTarget "BLEScanner" */;
+			buildPhases = (
+				538F62DC1A99026E00B7052C /* Sources */,
+				538F62DD1A99026E00B7052C /* Frameworks */,
+				538F62DE1A99026E00B7052C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BLEScanner;
+			productName = BLEScanner;
+			productReference = 538F62E01A99026E00B7052C /* BLEScanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		538F62F51A99026E00B7052C /* BLEScannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 538F63031A99026E00B7052C /* Build configuration list for PBXNativeTarget "BLEScannerTests" */;
+			buildPhases = (
+				538F62F21A99026E00B7052C /* Sources */,
+				538F62F31A99026E00B7052C /* Frameworks */,
+				538F62F41A99026E00B7052C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				538F62F81A99026E00B7052C /* PBXTargetDependency */,
+			);
+			name = BLEScannerTests;
+			productName = BLEScannerTests;
+			productReference = 538F62F61A99026E00B7052C /* BLEScannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		538F62D81A99026E00B7052C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Liam Nichols";
+				TargetAttributes = {
+					538F62DF1A99026E00B7052C = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					538F62F51A99026E00B7052C = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 538F62DF1A99026E00B7052C;
+					};
+				};
+			};
+			buildConfigurationList = 538F62DB1A99026E00B7052C /* Build configuration list for PBXProject "BLEScanner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 538F62D71A99026E00B7052C;
+			productRefGroup = 538F62E11A99026E00B7052C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				538F62DF1A99026E00B7052C /* BLEScanner */,
+				538F62F51A99026E00B7052C /* BLEScannerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		538F62DE1A99026E00B7052C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				538F62EE1A99026E00B7052C /* Images.xcassets in Resources */,
+				538F62F11A99026E00B7052C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		538F62F41A99026E00B7052C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		538F62DC1A99026E00B7052C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5367F6101A9A8A2F0010A406 /* BLEDataParsing.m in Sources */,
+				538F62EC1A99026E00B7052C /* ViewController.m in Sources */,
+				538F62E91A99026E00B7052C /* main.m in Sources */,
+				538F62E71A99026E00B7052C /* AppDelegate.m in Sources */,
+				5367F60A1A9A82E90010A406 /* BLEStickerPeripheral.m in Sources */,
+				5367F6001A9A7A1C0010A406 /* BLEPeripheral.m in Sources */,
+				5367F5FD1A9A78310010A406 /* BLEPeripheralManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		538F62F21A99026E00B7052C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				538F62FD1A99026E00B7052C /* BLEScannerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		538F62F81A99026E00B7052C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 538F62DF1A99026E00B7052C /* BLEScanner */;
+			targetProxy = 538F62F71A99026E00B7052C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		538F62EF1A99026E00B7052C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				538F62F01A99026E00B7052C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		538F62FE1A99026E00B7052C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		538F62FF1A99026E00B7052C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		538F63011A99026E00B7052C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BLEScanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		538F63021A99026E00B7052C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BLEScanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		538F63041A99026E00B7052C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BLEScannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLEScanner.app/Contents/MacOS/BLEScanner";
+			};
+			name = Debug;
+		};
+		538F63051A99026E00B7052C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BLEScannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLEScanner.app/Contents/MacOS/BLEScanner";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		538F62DB1A99026E00B7052C /* Build configuration list for PBXProject "BLEScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				538F62FE1A99026E00B7052C /* Debug */,
+				538F62FF1A99026E00B7052C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		538F63001A99026E00B7052C /* Build configuration list for PBXNativeTarget "BLEScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				538F63011A99026E00B7052C /* Debug */,
+				538F63021A99026E00B7052C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		538F63031A99026E00B7052C /* Build configuration list for PBXNativeTarget "BLEScannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				538F63041A99026E00B7052C /* Debug */,
+				538F63051A99026E00B7052C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 538F62D81A99026E00B7052C /* Project object */;
+}
