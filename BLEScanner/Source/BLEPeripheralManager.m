@@ -10,8 +10,6 @@
 #import "BLEPeripheral-Private.h"
 @import CoreBluetooth;
 
-static const NSTimeInterval BLEPeripheralManagerRestartWaitDuration = 3.0;
-
 @interface BLEPeripheralManager () <CBCentralManagerDelegate>
 
 @property (nonatomic, strong) CBCentralManager *centralManager;
@@ -145,12 +143,6 @@ static const NSTimeInterval BLEPeripheralManagerRestartWaitDuration = 3.0;
 
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)dictionary RSSI:(NSNumber *)RSSI
 {
-    if (self.restartTimer.isValid) {
-        [self.restartTimer invalidate];
-        self.restartTimer = nil;
-    }
-    self.restartTimer = [NSTimer scheduledTimerWithTimeInterval:BLEPeripheralManagerRestartWaitDuration target:self selector:@selector(_restartScan:) userInfo:nil repeats:NO];
-    
     // get the advertisment data and the class registered to support it.
     NSData *advertismentData = dictionary[CBAdvertisementDataManufacturerDataKey];
     Class blePeripheralClass = [self classOfRegisteredPeripheralSupportingAdvertismentData:advertismentData];
@@ -202,6 +194,20 @@ static const NSTimeInterval BLEPeripheralManagerRestartWaitDuration = 3.0;
     if (blePeripheral && [self.delegate respondsToSelector:@selector(peripheralManager:didUpdatePeripheral:)]) {
         [self.delegate peripheralManager:self didUpdatePeripheral:blePeripheral];
     }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // stop the old timer timer
+        if (self.restartTimer) {
+            [self.restartTimer invalidate];
+            self.restartTimer = nil;
+        }
+        
+        // create a new timer
+        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(_restartScan:) userInfo:nil repeats:NO];
+        
+        // store a reference to it
+        self.restartTimer = timer;
+    });
 }
 
 - (Class)classOfRegisteredPeripheralSupportingAdvertismentData:(NSData *)data
