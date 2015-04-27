@@ -10,6 +10,12 @@
 
 @interface ViewController : NSViewController
 
+@property (weak) IBOutlet NSSegmentedControl *segmentedControl;
+@property (weak) IBOutlet NSButton *scanButton;
+@property (weak) IBOutlet NSTableView *tableView;
+
+- (IBAction)segmentedControlSwitched:(id)sender;
+- (IBAction)scanButtonPressed:(id)sender;
 
 @end
 
