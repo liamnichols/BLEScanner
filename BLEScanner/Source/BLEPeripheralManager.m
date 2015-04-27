@@ -10,6 +10,8 @@
 #import "BLEPeripheral-Private.h"
 @import CoreBluetooth;
 
+static const NSTimeInterval BLEPeripheralManagerRestartWaitDuration = 3.0;
+
 @interface BLEPeripheralManager () <CBCentralManagerDelegate>
 
 @property (nonatomic, strong) CBCentralManager *centralManager;
@@ -17,6 +19,8 @@
 @property (nonatomic, strong) NSMutableDictionary *peripherals;
 
 @property (nonatomic, assign) BOOL shouldScan;
+
+@property (nonatomic, strong) NSTimer *restartTimer;
 
 @end
 
@@ -116,6 +120,14 @@
 {
     NSLog(@"%s", __PRETTY_FUNCTION__);
     [self.centralManager stopScan];
+    [self.restartTimer invalidate];
+}
+
+- (void)_restartScan:(id)sender
+{
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    [self _endCenteralManagerScan];
+    [self _beginCenteralManagerScan];
 }
 
 #pragma mark - CBCentralManagerDelegate
@@ -132,6 +144,11 @@
 
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)dictionary RSSI:(NSNumber *)RSSI
 {
+    if (self.restartTimer.isValid) {
+        [self.restartTimer invalidate];
+    }
+    self.restartTimer = [NSTimer scheduledTimerWithTimeInterval:BLEPeripheralManagerRestartWaitDuration target:self selector:@selector(_restartScan:) userInfo:nil repeats:NO];
+    
     // get the advertisment data and the class registered to support it.
     NSData *advertismentData = dictionary[CBAdvertisementDataManufacturerDataKey];
     Class blePeripheralClass = [self classOfRegisteredPeripheralSupportingAdvertismentData:advertismentData];
